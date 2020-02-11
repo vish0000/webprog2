@@ -1,0 +1,21 @@
+<html>
+    <head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+sorry i am late for this as well,, testing final
+
+<div id="demoid">this is gone change</div>
+<button id= "buttonid" type="button">change</button>
+</body>
+
+<script>
+    $(document).ready( function(){
+        $("#buttonid").click(function(){
+            document.getElementById("demoid").innerHTML = "hi i am jquery";
+            $("#demoid").load("sample.txt");
+        });
+    });
+</script>
+</html>
+

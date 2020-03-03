@@ -33,7 +33,7 @@ $(document).ready(function() {
         $("#thumbnails").html(html)
         $(".thumbnail").click( function() {
             id = $(this).attr("id")
-            img = '<img src="' + id + '" alt="' + id + '" style="height:98%;width:100%"/>';
+            img = '<img src="' + id + '" alt="' + id + '" style="height:98%;max-width:100%"/>';
    
             $("#picture").html(img);
             //$("#"+id).text("I have been clicked.");

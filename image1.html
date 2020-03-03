@@ -4,13 +4,12 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
-<body style="background-color:cornsilk;">
- 
-    <p>test for wenhook</p>
+<body class="w3-gray">
+
         <div id="thumbnails" class="w3-sidebar w3-bar-block w3-light-grey" style="width:15%;margin-left:2%" >
         </div>
         
-        <div id="picture"  style="margin-left:20%; border:5px double black; margin-right:3%; padding: 2px;">
+        <div id="picture" clas="w3-round-large w3-hover-border-gray"  style="border:5px solid gray; margin-left:20%;  margin-right:3%; padding: 2px;">
             <h2>selected pic will display here</h2>
         </div>
    
@@ -19,7 +18,7 @@
 function format_thumbnail(key, val) {
     img = '<img src="' + val + '" alt="' + key + '" style="width:100%"/>';
     caption = '<div class="w3-container w3-center w3-deep-orange"><p>' + key + '</p></div>';
-    card = '<div id="' + val + '" class="thumbnail w3-card-4" style="border:5px dashed black; margin-top:10px">' + img + caption + '</div>';
+    card = '<div id="' + val + '" class="thumbnail w3-card-4 w3-hover-border-black" style="border:5px solid gray; margin-top:10px">' + img + caption + '</div>';
     return card;
 }
 $(document).ready(function() {
@@ -32,7 +31,7 @@ $(document).ready(function() {
         $("#thumbnails").html(html)
         $(".thumbnail").click( function() {
             id = $(this).attr("id")
-            img = '<img src="' + id + '" alt="' + id + '" style="height:98%;max-width:100%"/>';
+            img = '<img src="' + id + '" alt="' + id + '" style="height:98%;width:100%"/>';
    
             $("#picture").html(img);
             //$("#"+id).text("I have been clicked.");

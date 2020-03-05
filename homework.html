@@ -8,7 +8,7 @@
         </head>
         <body>
         
-                <div id="thumbnails"  >
+                <div id="thumbnails" class="w3-col m6" >
                 
                 </div>
            
@@ -20,7 +20,7 @@ $(document).ready(function() {
         var items = [];
          html = "<table class='w3-table-all w3-bordered w3-hoverable'><thead><tr><th>homework</th><th>Link</th></tr></thead><tbody>";
         $.each( data, function( key, val ) {
-            html = html +"<tr><td>"+key+"</td><td>"+val+"</td></tr>"
+            html = html +"<tr><td>"+key+"</td><td><a href='"+val +"'>"+val+"</a></td></tr>"
             
         });
         html = html + "</tbody></table>"

@@ -1,0 +1,37 @@
+<html>  
+        <head>
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        </head>
+        <body>
+        <h4>reading from file</h4>
+                <div id="fromfile"  >
+                    
+                </div>
+                <h3>
+                <div id="demoid">this is gone change</div>
+                </h3>
+                <button type="button" onclick="update()">change</button>
+           
+        </body>
+        <script>
+ 
+function update(){
+ 
+    document.getElementById("demoid").innerHTML = "changed";
+}
+$(document).ready(function() {
+    $.getJSON("homework3.json", function(data) {
+        var items = [];
+         html = "<table class='w3-table-all'><thead><tr><th>user</th><th>said</th></tr></thead><tbody>";
+        $.each( data, function( key, val ) {
+            html = html +"<tr><td>"+key+"</td><td>"+val+"</td></tr>"
+            
+        });
+        html = html + "</tbody></table>"
+        $("#fromfile").html(html)
+    });
+});
+</script>      
+</html>

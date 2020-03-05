@@ -1,0 +1,31 @@
+<html>
+
+  
+        <head>
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        </head>
+        <body>
+        
+                <div id="thumbnails"  >
+                
+                </div>
+           
+        </body>
+        <script>
+ 
+$(document).ready(function() {
+    $.getJSON("homework.json", function(data) {
+        var items = [];
+         html = "<table class='w3-table-all w3-bordered w3-hoverable'><thead><tr><th>homework</th><th>Link</th></tr></thead><tbody>";
+        $.each( data, function( key, val ) {
+            html = html +"<tr><td>"+key+"</td><td>"+val+"</td></tr>"
+            
+        });
+        html = html + "</tbody></table>"
+        $("#thumbnails").html(html)
+    });
+});
+</script>      
+</html>
